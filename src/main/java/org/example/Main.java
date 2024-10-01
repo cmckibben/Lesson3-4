@@ -3,19 +3,53 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         testScore(76);
-        testScore2(76);
-        upDown("up");
-        upDown("down");
-        upDown("left");
-        upDown("right");
-        upDown(";lkdajsdf;alskdjfas;ldjfk");
-        toMonth(8);
-        upDown2("up");
-        upDown2("down");
-        upDown2("left");
-        upDown2("right");
-        upDown2(";lkdajsdf;alskdjfas;ldjfk");
-        toMonth2(8);
+//        testScore2(76);
+//        upDown("up");
+//        upDown("down");
+//        upDown("left");
+//        upDown("right");
+//        upDown(";lkdajsdf;alskdjfas;ldjfk");
+//        toMonth(8);
+//        upDown2("up");
+//        upDown2("down");
+//        upDown2("left");
+//        upDown2("right");
+//        upDown2(";lkdajsdf;alskdjfas;ldjfk");
+//        toMonth2(8);
+    }
+
+    public static void testScore(int testscore) {
+        char grade;
+
+        if (testscore >= 90) {
+            grade = 'A';
+        } else if (testscore >= 80) {
+            grade = 'B';
+        } else if (testscore >= 70) {
+            grade = 'C';
+        } else if (testscore >= 60) {
+            grade = 'D';
+        } else {
+            grade = 'E';
+        }
+        System.out.println("Grade = " + grade);
+    }
+
+    public static void testScore2(int testscore) {
+        char grade;
+
+        if (testscore >= 60) {
+            grade = 'D';
+        } else if (testscore >= 70) {
+            grade = 'C';
+        } else if (testscore >= 80) {
+            grade = 'B';
+        } else if (testscore >= 90) {
+            grade = 'A';
+        } else {
+            grade = 'E';
+        }
+        System.out.println("Grade = " + grade);
     }
 
     private static void upDown(String direction) {
@@ -36,47 +70,6 @@ public class Main {
         }
     }
 
-    private static void upDown2(String direction) {
-        switch (direction) {
-            case "up" ->             System.out.println("up");
-            case "down" ->           System.out.println("down");
-            case "left" , "right" -> System.out.println("left or right");
-            default ->               System.out.println("unknown");
-        }
-    }
-
-    public static void testScore(int testscore) {
-        char grade;
-
-        if (testscore >= 90) {
-            grade = 'A';
-        } else if (testscore >= 80) {
-            grade = 'B';
-        } else if (testscore >= 70) {
-            grade = 'C';
-        } else if (testscore >= 60) {
-            grade = 'D';
-        } else {
-            grade = 'F';
-        }
-        System.out.println("Grade = " + grade);
-    }
-    public static void testScore2(int testscore) {
-        char grade;
-
-        if (testscore >= 60) {
-            grade = 'D';
-        } else if (testscore >= 70) {
-            grade = 'C';
-        } else if (testscore >= 80) {
-            grade = 'B';
-        } else if (testscore >= 90) {
-            grade = 'A';
-        } else {
-            grade = 'F';
-        }
-        System.out.println("Grade = " + grade);
-    }
     public static void toMonth(int month) {
         String monthString;
         switch (month) {
@@ -109,6 +102,16 @@ public class Main {
         }
         System.out.println(monthString);
     }
+
+    private static void upDown2(String direction) {
+        switch (direction) {
+            case "up" ->             System.out.println("up");
+            case "down" ->           System.out.println("down");
+            case "left" , "right" -> System.out.println("left or right");
+            default ->               System.out.println("unknown");
+        }
+    }
+
     public static void toMonth2(int month) {
         String monthString = switch (month) {
             case 1 -> "January";
@@ -127,4 +130,6 @@ public class Main {
         };
         System.out.println(monthString);
     }
+
+
 }
